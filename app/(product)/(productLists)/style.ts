@@ -2,10 +2,12 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   productItem: {
-    backgroundColor: '#3a3b3c',
     borderRadius: 12,
     padding: 8,
-    width: 160
+    flexGrow: 1,
+    backgroundColor: '#bebebeff',
+    width: '100%',
+    maxWidth: 160
   },
   productImage: {
     width: '100%',
@@ -13,29 +15,23 @@ export default StyleSheet.create({
     borderRadius: 8,
     marginBottom: 8
   },
-  productHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    backgroundColor: '#DDD'
-  },
   productName: {
-    fontSize: 12
+    fontSize: 14
   },
   description: {
-    fontSize: 12,
-    marginBottom: 4
+    fontSize: 14
   },
   price: {
-    fontSize: 12,
-    color: 'green'
+    fontSize: 14
   },
-  addBtn: {
-    backgroundColor: '#007BFF',
+  viewBtn: {
+    backgroundColor: 'green',
     padding: 8,
     borderRadius: 12,
     marginTop: 'auto'
   },
   buttonText: {
-    textAlign: 'center'
+    textAlign: 'center',
+    color: '#ffffff'
   }
 });

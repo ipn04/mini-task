@@ -1,16 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  titleContainer: {
-    paddingTop: 38,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between'
+  cartBadgeContainer: {
+    position: 'relative'
   },
   cartBadge: {
     position: 'absolute',
-    top: -4,
-    right: -4,
+    top: 0,
+    right: 0,
     backgroundColor: 'red',
     borderRadius: 7,
     width: 14,
@@ -21,14 +18,26 @@ export default StyleSheet.create({
   cartBadgeText: {
     color: '#fff',
     fontSize: 10,
-    fontWeight: 'bold',
-    textAlign: 'center',
     lineHeight: 14
   },
   productContainer: {
-    gap: 16,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between'
+    gap: 8
+  },
+  modalOverlay: {
+    flex: 1
+  },
+  bottomModal: {
+    backgroundColor: '#ffffffff',
+    padding: 20,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    position: 'absolute',
+    bottom: 0,
+    width: '100%'
+  },
+  modalButton: {
+    backgroundColor: 'green',
+    paddingVertical: 18,
+    borderRadius: 10
   }
 });

@@ -6,7 +6,15 @@ import tseslint from 'typescript-eslint';
 
 export default [
   {
-    ignores: ['node_modules', 'scripts', 'dist', 'build']
+    ignores: [
+      'node_modules',
+      'scripts',
+      'dist',
+      'build',
+      'babel.config.js',
+      'metro.config.js',
+      'tailwind.config.js'
+    ]
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
@@ -41,6 +49,22 @@ export default [
     settings: {
       react: {
         version: 'detect'
+      }
+    }
+  },
+  {
+    files: [
+      '*.config.js',
+      'babel.config.js',
+      'tailwind.config.js',
+      'metro.config.js'
+    ],
+    languageOptions: {
+      globals: {
+        module: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        process: 'readonly'
       }
     }
   }
