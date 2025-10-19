@@ -2,6 +2,10 @@ import '../global.css';
 import { Stack } from 'expo-router';
 import { CartProvider } from '@/src/Context/AppContext';
 
+export const unstable_settings = {
+  anchor: '(product)'
+};
+
 export default function RootLayout() {
   return (
     <CartProvider>
