@@ -2,7 +2,7 @@
 
 📂 **Repository:** https://github.com/ipn04/mini-task.git
 <br>
-📱 **Apk** [Download Here](https://expo.dev/accounts/ipnicolas/projects/mini-task/builds/a1c1d029-b86b-43d5-aba5-4b9b395e6212)
+📱 **Apk** [Download Here](https://expo.dev/accounts/ipnicolas/projects/mini-task/builds/a1c1d029-b86b-43d5-aba5-4b9b395e6212) using your Android device
 
 ## Installation & Setup
 
