@@ -94,7 +94,7 @@ export default function CartScreen() {
             </ScrollView>
 
             {state.items.length > 0 && (
-                <View className="p-4 mt-3 h-34 border-t border-gray-200 bg-white">
+                <View className="p-4 mt-3 h-32 border-t border-gray-200 bg-white">
                     <Text className="text-xl mb-4">
                         Summary Details
                     </Text>
@@ -106,7 +106,7 @@ export default function CartScreen() {
                     <Text className="text-md mb-2">
                         Number of items: {totalItem} item/s
                     </Text>
-                    <Text className="text-md mb-2">
+                    <Text className="text-md mb-4">
                         Total: ${totalPrice.toFixed(2)}
                     </Text>
                     <TouchableOpacity

@@ -20,9 +20,6 @@ export default StyleSheet.create({
     fontSize: 10,
     lineHeight: 14
   },
-  productContainer: {
-    gap: 8
-  },
   modalOverlay: {
     flex: 1
   },

@@ -15,13 +15,16 @@ export default function ProductLayout() {
     }
 
     return (
-        <Stack screenOptions={{ headerShown: true }}>
+        <Stack screenOptions={{
+            headerShown: true
+        }}
+        >
             <Stack.Screen
                 name="index"
                 options={{
                     title: '',
                     headerLeft: () => (
-                        <Text className='text-4xl font-medium'>
+                        <Text className='text-2xl font-medium'>
                             Products
                         </Text>
                     ),

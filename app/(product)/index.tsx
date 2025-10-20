@@ -1,4 +1,4 @@
-import { ScrollView, View, Text, Modal, TouchableOpacity, Pressable, Image, ToastAndroid } from 'react-native';
+import { FlatList, View, Text, Modal, TouchableOpacity, Pressable, Image, ToastAndroid } from 'react-native';
 import ProductLists from './(productLists)/ProductLists';
 import { useCart } from '@/src/Context/AppContext';
 import { Product } from '@/src/types/Product';
@@ -59,14 +59,19 @@ export default function ProductScreen() {
 
   return (
     <View className={`${openModal ? 'opacity-50' : 'bg-white'}`}>
-      <ScrollView
-        className="p-4 h-full"
+      <FlatList
+        className='h-screen'
+        data={products}
+        numColumns={2}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => (
+          <View className="w-1/2 p-2">
+            <ProductLists products={[item]} openModal={openModalView} />
+          </View>
+        )}
+        contentContainerStyle={{ padding: 8 }}
         showsVerticalScrollIndicator={false}
-      >
-        <View className="flex-row justify-between flex-wrap" style={style.productContainer}>
-          <ProductLists products={products} openModal={openModalView} />
-        </View>
-      </ScrollView>
+      />
 
       <Modal
         animationType="slide"
@@ -88,11 +93,9 @@ export default function ProductScreen() {
             <Text className="text-2xl font-semibold">${selectedProduct?.price.toFixed(2)}</Text>
           </View>
           <Text className="mb-4">{selectedProduct?.description}</Text>
-          <View>
-            <TouchableOpacity style={style.modalButton} onPress={() => handleAddToCart(selectedProduct!)}>
-              <Text className="text-white font-bold text-center">Add To Cart</Text>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity style={style.modalButton} onPress={() => handleAddToCart(selectedProduct!)}>
+            <Text className="text-white font-bold text-center">Add To Cart</Text>
+          </TouchableOpacity>
         </View>
       </Modal>
     </View>

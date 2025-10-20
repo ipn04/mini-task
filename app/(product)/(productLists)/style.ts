@@ -6,8 +6,7 @@ export default StyleSheet.create({
     padding: 8,
     flexGrow: 1,
     backgroundColor: '#bebebeff',
-    width: '100%',
-    maxWidth: 160
+    width: '100%'
   },
   productImage: {
     width: '100%',
